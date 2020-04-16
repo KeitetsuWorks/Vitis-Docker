@@ -49,8 +49,11 @@ RUN apt-get update && \
         screen \
         pax \
         gzip \
+        python-dev \
         python2.7 \
+        python3-dev \
         python3 \
+        apt-utils \
         binutils \
         cpio \
         expect \
@@ -60,16 +63,20 @@ RUN apt-get update && \
         gosu \
         lib32z1-dev \
         libc6 \
+        libcanberra-gtk-module \
+        libcanberra-gtk3-module \
         libglib2.0-dev \
         libgtk2.0-0 \
         libjpeg62-dev \
         libsdl1.2-dev \
         libstdc++6 \
+        libtext-csv-perl \
         libtool-bin \
         libxi6 \
         libxrender1 \
         libxtst6 \
         locales \
+        lsb-core \
         lsb-release \
         ncurses-dev \
         ocl-icd-libopencl1 \
@@ -92,7 +99,8 @@ RUN apt-get update && \
         libc6-dev:i386 \
         libgtk2.0-0:i386 \
         libncurses5:i386 \
-        libstdc++6:i386 && \
+        libstdc++6:i386 \
+        libxtst6:i386 && \
     apt-get clean && \
     apt-get autoclean && \
     ln -fs /bin/bash /bin/sh && \
