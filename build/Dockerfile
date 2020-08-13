@@ -36,6 +36,8 @@ RUN apt-get update && \
         diffstat \
         chrpath \
         socat \
+        x11-utils \
+        dbus-x11 \
         xterm \
         autoconf \
         libtool \
