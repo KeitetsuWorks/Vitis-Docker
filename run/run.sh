@@ -28,5 +28,5 @@ docker run \
     --env XILINXD_LICENSE_FILE=/data/Xilinx.lic \
     --volume /tmp/.X11-unix:/tmp/.X11-unix:rw \
     --volume /data1/Software/Xilinx:/data \
-    keitetsu/vitis:ubuntu18.04-v2019.2-1 \
+    keitetsu/vitis:ubuntu18.04-v2020.1-1 \
 

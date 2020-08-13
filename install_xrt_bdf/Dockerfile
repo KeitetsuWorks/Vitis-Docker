@@ -8,19 +8,19 @@
 ##              This software is released under the MIT License.
 ##
 
-FROM keitetsu/vitis:ubuntu18.04-v2019.2-1
+FROM keitetsu/vitis:ubuntu18.04-v2020.1-1
 
 ##
 ## install XRT
 ##
 RUN cd /tmp && \
     wget \
-        -O xrt_201920.2.3.1301_18.04-xrt.deb \
-        https://www.xilinx.com/bin/public/openDownload?filename=xrt_201920.2.3.1301_18.04-xrt.deb && \
+        -O xrt_202010.2.6.655_18.04-amd64-xrt.deb \
+        https://www.xilinx.com/bin/public/openDownload?filename=xrt_202010.2.6.655_18.04-amd64-xrt.deb && \
     apt-get update && \
     apt-get upgrade -y -qq && \
     apt-get install -y -qq \
-        ./xrt_201920.2.3.1301_18.04-xrt.deb && \
+        ./xrt_202010.2.6.655_18.04-amd64-xrt.deb && \
     apt-get clean && \
     apt-get autoclean && \
     \
@@ -37,17 +37,17 @@ RUN cd /tmp && \
         https://github.com/Avnet/bdf.git \
         avnet_bdf && \
     cd avnet_bdf && \
-    git checkout 1751d123d98e1a5ed6b1308942742e7134f21d56 && \
+    git checkout 30b6904ed5c06eae4cf8c0afc03e8f918f20e89b && \
     rm README.md download_zip.png locate_zip.png && \
-    cp -r * /opt/Xilinx/Vivado/2019.2/data/boards/board_files && \
+    cp -r * /opt/Xilinx/Vivado/2020.1/data/boards/board_files && \
     \
     cd /tmp && \
     git clone \
         https://github.com/Digilent/vivado-boards.git \
         digilent_bdf && \
     cd digilent_bdf && \
-    git checkout 2bb8cde0ab19ff31bc8f0e43780f9d98f6578e0f && \
-    cp -r new/board_files/* /opt/Xilinx/Vivado/2019.2/data/boards/board_files && \
+    git checkout 8b56d978a78d844568cb39616c5f46c0f5f51850 && \
+    cp -r new/board_files/* /opt/Xilinx/Vivado/2020.1/data/boards/board_files && \
     \
     cd /tmp && \
     rm -rf /tmp/*

@@ -89,7 +89,9 @@ RUN apt-get update && \
         sudo \
         u-boot-tools \
         vim \
-        xvfb && \
+        xvfb \
+        parted \
+        udev && \
     \
     dpkg --add-architecture i386 && \
     apt-get update && \

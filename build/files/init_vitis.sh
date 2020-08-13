@@ -10,6 +10,6 @@
 ##              This software is released under the MIT License.
 ##
 
-if [ -f /opt/Xilinx/Vitis/2019.2/settings64.sh ]; then
-    . /opt/Xilinx/Vitis/2019.2/settings64.sh
+if [ -f /opt/Xilinx/Vitis/2020.1/settings64.sh ]; then
+    . /opt/Xilinx/Vitis/2020.1/settings64.sh
 fi
