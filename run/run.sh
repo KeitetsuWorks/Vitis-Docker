@@ -21,6 +21,8 @@ docker run \
     --env TZ=Asia/Tokyo \
     --env DISPLAY=${DISPLAY} \
     --env QT_X11_NO_MITSHM=1 \
+    --env NO_AT_BRIDGE=1 \
+    --env LIBGL_ALWAYS_INDIRECT=1 \
     --env HOST_USER=${USER} \
     --env HOST_UID=$(id -u ${USER}) \
     --env HOST_GROUP=${USER} \

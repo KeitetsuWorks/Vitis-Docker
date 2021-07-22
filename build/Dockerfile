@@ -22,9 +22,8 @@ RUN apt-get update && \
         tofrodos \
         iproute2 \
         gawk \
-        gcc-4.8 \
-        make \
         net-tools \
+        libtinfo5 \
         libncurses5-dev \
         libncursesw5-dev \
         libssl-dev \
@@ -48,10 +47,11 @@ RUN apt-get update && \
         g++-multilib \
         gcc-multilib \
         build-essential \
+        libc6-dev-i386 \
         screen \
         pax \
         gzip \
-        python-dev \
+        python2.7-dev \
         python2.7 \
         python3-dev \
         python3 \
@@ -64,7 +64,6 @@ RUN apt-get update && \
         git \
         gosu \
         lib32z1-dev \
-        libc6 \
         libcanberra-gtk-module \
         libcanberra-gtk3-module \
         libglib2.0-dev \
@@ -91,20 +90,17 @@ RUN apt-get update && \
         vim \
         xvfb \
         parted \
-        udev && \
+        udev \
+        graphviz && \
     \
-    dpkg --add-architecture i386 && \
+    add-apt-repository ppa:xorg-edgers/ppa && \
     apt-get update && \
-    apt-get upgrade -y -qq && \
-    apt-get install -y -qq --no-install-recommends \
-        zlib1g:i386 \
-        dpkg-dev:i386 \
-        libc6:i386 \
-        libc6-dev:i386 \
-        libgtk2.0-0:i386 \
-        libncurses5:i386 \
-        libstdc++6:i386 \
-        libxtst6:i386 && \
+    apt-get install -y -qq \
+        libgl1-mesa-glx \
+        libgl1-mesa-dri \
+        libgl1-mesa-dev && \
+    add-apt-repository --remove ppa:xorg-edgers/ppa && \
+    \
     apt-get clean && \
     apt-get autoclean && \
     ln -fs /bin/bash /bin/sh && \
