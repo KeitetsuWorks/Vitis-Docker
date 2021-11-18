@@ -13,7 +13,7 @@
 # ./xsetup -b ConfigGen
 
 ./xsetup \
-    --agree 3rdPartyEULA,WebTalkTerms,XilinxEULA \
+    --agree 3rdPartyEULA,XilinxEULA \
     --batch Install \
     --config install_config.txt
 

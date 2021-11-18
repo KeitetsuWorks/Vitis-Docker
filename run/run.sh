@@ -30,5 +30,5 @@ docker run \
     --env XILINXD_LICENSE_FILE=/data/Xilinx.lic \
     --volume /tmp/.X11-unix:/tmp/.X11-unix:rw \
     --volume /data1/Software/Xilinx:/data \
-    keitetsu/vitis:ubuntu18.04-v2021.1-1 \
+    keitetsu/vitis:ubuntu18.04-v2021.2-1 \
 
